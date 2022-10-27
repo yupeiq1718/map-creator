@@ -148,19 +148,13 @@ const useMapConverter = ({ dom, maps, hotSpots, coordinates }:Props) => {
     size: number,
     src: string
   }
-  let positionImageData: PositionImageData = {
-    size: 6,
-    src: ''
-  }
+  let positionImageData: PositionImageData
 
   interface AngleImageData {
     size: number,
     src: string
   }
-  let angleImageData: AngleImageData = {
-    size: 20,
-    src: ''
-  }
+  let angleImageData: AngleImageData
 
   const createCameraPosition = ({ positionData, angleData }:{
     positionData: PositionImageData,

@@ -94,12 +94,18 @@ const handleMap = () => {
       src: angleImage
     }
   })
+  updateCameraPosition({
+
+    x: 77,
+    y: 36,
+    angle: 0
+  })
 }
 onMounted(async () => {
   handleMap()
 })
-
 </script>
+
 <template>
   <div class="fixed top-12 left-20 z-50 border-2 border-black w-1/4 h-1/4 rounded-2xl bg-black">
     <div
