@@ -18,6 +18,13 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.{ts,tsx,vue,d.ts}", "./auto-imports.d.ts", "./components.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "**/*.d.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
