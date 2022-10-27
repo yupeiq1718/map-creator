@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "build:gh-pages": "vite build --mode gh-pages --mode gh-pages",
+    "build:gh-pages": "vue-tsc --noEmit && vite build --mode gh-pages",
     "dev": "vite",
     "dev:gh-pages": "vite --mode gh-pages",
     "prepare": "husky install",
