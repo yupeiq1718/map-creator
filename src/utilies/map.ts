@@ -191,7 +191,7 @@ const useMapConverter = ({ dom, maps, hotSpots, coordinates }:Props) => {
     setMap(maps[floor])
     const positions = hotSpots.filter(hotSpot => hotSpot.floor === floor).map(({ position }) => ({
       x: position.x,
-      y: position.y * -1
+      y: position.y
     }))
     calculateCoordinate(positions)
     setCanvas(coordinates[floor])

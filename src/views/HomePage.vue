@@ -19,25 +19,49 @@ interface HotSpot {
 const hotSpots:HotSpot[] = [
   {
     position: {
-      x: 0, y: 0
+      x: 0, y: 4
     },
     floor: 0
   },
   {
     position: {
-      x: 21, y: 14
+      x: 1, y: 2
     },
     floor: 0
   },
   {
     position: {
-      x: 77, y: 36
+      x: 4, y: 4.6
     },
     floor: 0
   },
   {
     position: {
-      x: 99, y: 99
+      x: 8, y: 5
+    },
+    floor: 0
+  },
+  {
+    position: {
+      x: 12, y: 5.1
+    },
+    floor: 0
+  },
+  {
+    position: {
+      x: 16, y: 4.9
+    },
+    floor: 0
+  },
+  {
+    position: {
+      x: 20, y: 5.7
+    },
+    floor: 0
+  },
+  {
+    position: {
+      x: 24, y: 6
     },
     floor: 0
   }
@@ -47,29 +71,29 @@ const maps = [
   {
     src: floor1Image,
     ratio: 1.5853,
-    zoom: 0.56,
-    offsetX: 0.32,
-    offsetY: 0.29
+    zoom: 0.7,
+    offsetX: 0.2,
+    offsetY: 0.05
   },
   {
     src: floor2Image,
     ratio: 1.6222,
     zoom: 1,
     offsetX: 0,
-    offsetY: 0.1
+    offsetY: 0
   }
 ]
 
 const coordinates = [
   {
-    zoom: 1,
-    offsetX: 0,
-    offsetY: 0.14
+    zoom: 0.7,
+    offsetX: 0.22,
+    offsetY: 0.33
   },
   {
-    zoom: 0.9,
-    offsetX: 0.03,
-    offsetY: 0.16
+    zoom: 0.5,
+    offsetX: 0,
+    offsetY: 0
   }
 ]
 
@@ -95,9 +119,8 @@ const handleMap = () => {
     }
   })
   updateCameraPosition({
-
-    x: 77,
-    y: 36,
+    x: 4,
+    y: 4.6,
     angle: 0
   })
 }
