@@ -1,0 +1,25 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.wordWrap": "on",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "vue"
+  ],
+  "eslint.validate": [
+    "vue",
+    "javascript",
+    "typescript"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "appService.showBuildDuringDeployPrompt": false
+}
