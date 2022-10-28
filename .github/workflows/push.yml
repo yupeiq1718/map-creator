@@ -1,0 +1,46 @@
+name: Push CI/CD
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.13.2]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        
+    - name: Install
+      run: |
+        npm install -g yarn
+        yarn
+        yarn install
+        
+    - name: Build
+      run: |
+        rm -rf node_modules/.cache
+        yarn build:gh-pages
+      
+    - name: Test
+      run: |
+        yarn lint:script
+        yarn lint:style
+          
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v4
+      with:
+        BRANCH: gh-pages
+        FOLDER: dist

@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouterOptions, Router, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouterOptions, Router, RouteRecordRaw } from 'vue-router'
 
-const routes: RouteRecordRaw[] = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
 ]
 
 const options: RouterOptions = {
-  history: createWebHistory('/'),
+  history: createWebHashHistory(import.meta.env.VITE_APP_BASE_URL),
   routes
 }
 

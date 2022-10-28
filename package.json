@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
+    "build:gh-pages": "vue-tsc --noEmit && vite build --mode gh-pages",
     "dev": "vite",
+    "dev:gh-pages": "vite --mode gh-pages",
     "prepare": "husky install",
     "preview": "vite preview",
+    "preview:gh-pages": "vite preview --mode gh-pages",
     "lint:script": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "lint:style": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix"
   },
